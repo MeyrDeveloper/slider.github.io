@@ -1,0 +1,287 @@
+.slide-12 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    &--container {
+        padding-left: 3%;
+        padding-right: 2.9%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1%;
+        align-items: flex-end;
+        // background: url('../images/slide-12/bg-bot.png') no-repeat;
+        ul {
+            font-family: $font-secondary;
+            font-size: 32px;
+            font-weight: bold;
+            max-width: 30%;
+            .active & {
+                animation: textContent 2000ms ease-in;
+            }
+        }
+        p {
+            text-align: right;
+            max-width: 38%;
+            font-size: 36px;
+            font-family: $font-secondary;
+            font-weight: bold;
+            .active & {
+                animation: textContetRight 2000ms ease-in;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/slide-12/bg.png') no-repeat;
+    background-size: cover;
+    background-position: 2% 0;
+    &--center {
+        position: absolute;
+        top: 50%;
+        width: 100vw;
+        transform: translateY(-50%);
+        display: block;
+        height: 100%;
+        max-height: 42vh;
+        background: url('../images/slide-12/window.png') no-repeat;
+        background-size: cover;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-palm {
+        position: absolute;
+        bottom: -1%;
+        &__right {
+            right: -100%;
+            transition: right 1000ms ease-in 200ms;
+            .active & {
+                right: -2%;
+            }
+        }
+        &__left {
+            left: -100%;
+            transition: left 1000ms ease-in 200ms;
+            .active & {
+                left: -2%;
+            }
+            img {
+                transform: scaleX(-1);
+            }
+        }
+    }
+    &--top {
+        padding-top: 6%;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        .active & {
+            animation: textTop 1200ms ease-in-out;
+        }
+        h1 {
+            font-family: $font-third;
+            font-size: 116px;
+        }
+        h2 {
+            margin-top: 20px;
+            font-family: $font-secondary;
+            font-size: 72px;
+            font-weight: bold;
+        }
+    }
+
+    &--bottom {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+    &--sofa {
+        position: absolute;
+        bottom: -0.60%;
+        left: 24%;
+        max-width: 46%;
+        .active & {
+            animation: sofa 1000ms ease;
+        }
+        &--img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &--note {
+            position: absolute;
+            max-width: 240px;
+            bottom: 65%;
+            left: -7%;
+        }
+        &--books {
+            position: absolute;
+            max-width: 165px;
+            bottom: 65%;
+            right: 0;
+        }
+        &--robo {
+            position: absolute;
+            max-width: 316px;
+            top: -36.5%;
+            right: 14%;
+        }
+        // &--zindex {
+          
+        // }
+        &--girl {
+            position: absolute;
+            max-width: 100%;
+            z-index: 1;
+            width: 90%;
+            bottom: 0;
+            left: 13%;
+        }
+    }
+    &--cactus {
+        position: absolute;
+        max-width: 190px;
+        bottom: 2%;
+        right: 7%;
+        opacity: 0;
+        transition: opacity 1s ease 200ms;
+        .active & {
+            opacity: 1;
+        }
+    }
+
+    &-img {
+        &-abs {
+            position: absolute;
+            bottom: 10%;
+            animation: robo 600ms ease-out infinite; 
+        }
+    }
+    &--robot {
+        &--big {
+            position: absolute;
+            max-width: 17%;
+            bottom: 0;
+            right: 15%;
+            opacity: 0;
+            transition: opacity 500ms ease 1s;
+            .active & {
+                opacity: 1;
+            }
+        }
+    }
+
+    @keyframes robo {
+        0% {
+            opacity: 1;
+        }
+        10% {
+            opacity: 1;
+        }
+
+        11% {
+            opacity: 0;
+        }
+        15% {
+            opacity: 0;
+        }
+
+        16% {
+            opacity: 1;
+        }
+
+        28% {
+            opacity: 1;
+        }
+
+        29% {
+            opacity: 0;
+        }
+        33% {
+            opacity: 0;
+        }
+        35% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 1;
+        }
+        62% {
+            opacity: 0;
+        }
+        72% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        76% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        99% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes textTop {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes textContent {
+        0% {
+            transform: translateX(-100%);
+        }
+        50% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes textContetRight {
+        0% {
+            transform: translateX(100%);
+        }
+        50% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes sofa {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes kaktus {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+}

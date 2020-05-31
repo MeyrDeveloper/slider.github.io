@@ -1,0 +1,262 @@
+.section .slide-07{
+    .bg-1{
+        background: url('../images/slide-7/bg.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .bg-0{
+        background: #ffffff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+    }
+    .bg-2{
+        background: url('../images/slide-7/bg-2.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .bg-3{
+        background: url('../images/slide-7/bg-3.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .bg-4{
+        background: url('../images/slide-7/bg-4.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .bg-5{
+        background: url('../images/slide-7/bg-5.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    
+    @keyframes palm {
+        from {transform: translateX(10px);}
+        50% {transform: translateX(0px);}
+        to {transform: translateX(10px);}
+        }
+
+        @keyframes palm2 {
+            from {transform: translateX(-10px)}
+            50% {transform: translateX(0px)}
+            to {transform: translateX(-10px)}
+            }
+    .palm{
+        position: absolute;
+        bottom: 0%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.n1{
+            left: -100%;
+            transition: 1s left 1s;
+            animation: palm  3s infinite ease-in-out;
+            background: url('../images/slide-7/palm.png');
+        }
+        &.n2{
+            right: -100%;
+            transition: 1s right 1s;
+            animation: palm  3s infinite ease-in-out;
+            background: url('../images/slide-7/palm-2.png');
+        }
+        @include resize((
+            width: 287px,
+            height: 869px
+        ));
+    }
+    .title{
+        color: #ffffff;
+        font-size: 60px;
+        position: absolute;
+        top: 6vh;
+        left: 5%;
+        font-family: "MyriadPro-BoldCond";
+        opacity: 0;
+        transition: 1s opacity 0s;
+    }
+    .text-1{
+        color: #ffffff;
+        font-size: 116px;
+        position: absolute;
+        top: 15vh;
+        left: 5%;
+        font-family: 'Westing';
+        opacity: 0;
+        transition: 1s opacity 0s;
+    }
+    .text-2{
+        color: #ffffff;
+        font-size: 60px;
+        position: absolute;
+        bottom: 10vh;
+        left: 5%;
+        font-family: "MyriadPro-Cond";
+        opacity: 0;
+        transition: 1s opacity 1s;
+    }
+
+    .block{
+        position: absolute;
+        display: inline-block;
+        top: 20vh;
+        left: 63%;
+        opacity: 0;
+        transition: 1s opacity;
+        h1{
+            color: #ffffff;
+            font-size: 100px;
+            font-family: 'Westing';
+            margin-bottom: 30px;
+        }
+        p{
+            color: #ffffff;
+            font-size: 48px;
+            font-family: "MyriadPro-BoldCond";
+            margin-bottom: 30px;
+        }
+        div{
+            color: #ffffff;
+            font-size: 36px;
+            font-family: "MyriadPro-Cond";
+        }
+    }
+}
+
+.section.active .slide-07{
+    .palm{
+        &.n1{
+            left: 0%;
+        }
+        &.n2{
+            right: 0%;
+        }
+    }
+    .title, .text-1, .text-2{
+        opacity: 1;
+    }
+}
+
+
+.section.state-1 .slide-07{
+    .palm{
+        &.n1{
+            left: -100%;
+        }
+        &.n2{
+            right: -1000%;
+        }
+    }
+    .title, .text-1, .text-2{
+        opacity: 0;
+    }
+    .bg-2, .bg-0{
+        opacity: 1;
+    }
+    .block.block-1{
+        opacity: 1;
+    }
+    
+}
+
+.section.state-2 .slide-07{
+    .palm{
+        &.n1{
+            left: -100%;
+        }
+        &.n2{
+            right: -1000%;
+        }
+    }
+    .title, .text-1, .text-2{
+        opacity: 0;
+    }
+    .bg-3, .bg-0{
+        opacity: 1;
+    }
+    .block.block-2{
+        opacity: 1;
+    }
+}
+
+.section.state-3 .slide-07{
+    .palm{
+        &.n1{
+            left: -100%;
+        }
+        &.n2{
+            right: -1000%;
+        }
+    }
+    .title, .text-1, .text-2{
+        opacity: 0;
+    }
+    .bg-4, .bg-0{
+        opacity: 1;
+    }
+    .block.block-3{
+        opacity: 1;
+    }
+}
+
+
+.section.state-4 .slide-07{
+    .palm{
+        &.n1{
+            left: -100%;
+        }
+        &.n2{
+            right: -1000%;
+        }
+    }
+    .title, .text-1, .text-2{
+        opacity: 0;
+    }
+    .bg-5, .bg-0{
+        opacity: 1;
+    }
+    .block.block-4{
+        opacity: 1;
+    }
+}

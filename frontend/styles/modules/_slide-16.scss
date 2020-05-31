@@ -1,0 +1,166 @@
+.slide-16 {
+    height: 100vh;
+    width: 100%;
+    background: url(../images/slide-16/bg.png) no-repeat center / cover;
+    overflow: hidden;
+    .top-line{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bottom-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .text {
+        transition: 1s all ease;
+        opacity: 0;
+        position: absolute;
+        top: 33%;
+        left: -100%;
+        color: #ffffff;
+        font-family: $font-secondary;
+        font-size: 59px;
+        z-index: 4;
+    }
+    .planet {
+        position: absolute;
+        right: 10%;
+        top: 11%;
+        width: 800px;
+        height: 800px;
+        &__circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            z-index: 2;
+        }
+        &__shadow {
+            position: absolute;
+            right: -28%;
+            top: -26%;
+            width: 167%;
+            z-index: 1;
+            transform-origin: center center;
+            animation: 2s pulse ease infinite;
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(0.97);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+        &__sun {
+            position: absolute;
+            top: 30%;
+            right: -19%;
+            z-index: 1;
+            width: 39%;
+            animation: 2s scale1 infinite ease;
+        }
+        &__sun-blick1 {
+            position: absolute;
+            top: 47%;
+            right: -19%;
+            width: 48%;
+            z-index: 3;
+            animation: 2s left-to-right infinite ease;
+        }
+        &__sun-blick2 {
+            position: absolute;
+            top: 49%;
+            right: -19%;
+            width: 55%;
+            z-index: 3;
+            animation: 2s left-to-right infinite ease;
+        }
+        &__back-line1 {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            left: -34%;
+            top: 28%;
+            animation: 2s left-to-right infinite linear;
+        }
+        &__back-line2 {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            right: -33%;
+            top: -5%;
+            animation: 2s left-to-right infinite linear;
+        }
+        &__back-line3 {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            right: -33%;
+            top: -22%;
+            animation: 2s left-to-right infinite linear;
+        }
+        &__front-line1 {
+            position: absolute;
+            width: 166%;
+            z-index: 3;
+            right: -34%;
+            top: -24%;
+            animation: 2s left-to-right infinite linear;
+        }
+        &__center {
+            position: absolute;
+            top: 13%;
+            left: 9%;
+            z-index: 3;
+            width: 100%;
+            animation: 2s opac infinite linear;
+            @keyframes opac {
+                0%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 0.4;
+                }
+                10%{
+                    opacity: 1;
+                }
+            }
+        }
+        @keyframes left-to-right {
+            0%{
+                transform:translate(0%);
+            }
+            50%{
+                transform:translate(1%);
+            }
+            10%{
+                transform:translate(0%);
+            }
+        }
+        @keyframes scale1 {
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(1.08);
+            }
+            10%{
+                transform:scale(1);
+            }
+        }
+    }
+
+}
+.section.active .slide-16 {
+    .text {
+        left: 4.5%;
+        opacity: 1;
+    }  
+}

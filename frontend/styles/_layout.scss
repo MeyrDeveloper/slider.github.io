@@ -1,0 +1,40 @@
+.main, body {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// .container {
+        
+// }
+
+.section {
+    overflow: hidden;
+}
+
+.container--big {
+    max-width: 1728px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container--sm {
+    max-width: 1536px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 300px;
+}
+.slides {
+    // max-width: 300px;
+    // & > li {
+    //     width: 100%;
+    //     height: auto;
+    //     img {
+    //         width: 100%;
+    //         height: auto;
+    //     }
+    // }
+}

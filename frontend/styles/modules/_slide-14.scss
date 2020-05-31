@@ -1,0 +1,143 @@
+.slide-14 {
+  height: 100vh;
+  background: url(../images/slide-14/bg.png) no-repeat center / cover;
+  font-family: $font-secondary;
+  color: #fff;
+  text-align: right;
+  display: flex;
+  overflow: hidden;
+  .abs {
+    position: absolute;
+  }
+  .bg-lines {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    z-index: 100;
+  }
+  .left {
+    position: relative;
+    width: calc(100% / 12 * 8);
+    &__window {
+      position: absolute;
+      left: -30%;
+      top: -1%;
+      width: 109%;
+      opacity: 0;
+      transition: 1s all ease;
+    }
+    &__sun-lines {
+      position: absolute;
+      right: 18%;
+      top: 12%;
+    }
+    &__robot {
+      position: absolute;
+      top: 13%;
+      left: -6%;
+      width: 65%;
+    }
+    &__man {
+      position: absolute;
+      top: 48%;
+      left: 10%;
+      width: 58%;
+      z-index: 2;
+      animation: 2s scale1 infinite linear;
+    }
+    &__keyboard {
+      position: absolute;
+      top: 82%;
+      left: 46%;
+      width: 46%;
+    }
+    &__display {
+      position: absolute;
+      top: 49%;
+      left: 43%;
+      width: 46%;
+      z-index: 1;
+      // animation: 2s scale1 infinite linear;
+     &--1 {
+      position: absolute;
+      opacity: 0;
+      border-radius: 8px;
+      max-width: 480px;
+      max-height: 285px;
+      z-index: 1;
+      top: 50.5%;
+      left: 45.1%;
+      transition: opacity 500ms ease;
+      .state-1 & {
+        opacity: 1;
+      }
+     }
+     &--2 {
+      opacity: 0 !important;
+      .state-2 & {
+        opacity: 1 !important;
+      }
+     }
+    }
+  }
+  .right {
+    width: calc(100% / 12 * 4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5%;
+    margin-top: 6%;
+    transition: 1s all ease;
+    opacity: 0;
+    transform: translate(100%);
+    &__text {
+      font-size: 42px;
+      max-width: 626px;
+      margin-top: 20%;
+      &__p2 {
+        margin-top: 45px;
+      }
+    }
+    &__title {
+      font-size: 76px;
+      font-family: $font-third;
+    }
+  }
+  @keyframes left-to-right {
+    0%{
+      transform:translate(0%)
+    }
+    50%{
+      transform:translate(5px)
+    }
+    100%{
+      transform:translate(0%)
+    }
+  }
+  @keyframes scale1 {
+    0%{
+      transform:scale(1);
+    }
+    50%{
+      transform:scale(1.02);
+    }
+    100%{
+      transform:scale(1);
+    }
+  }
+}
+.section.active .slide-14{
+ .left {
+   &__window {
+     opacity: 1;
+     left: -4%;
+   }
+ }
+ .right {
+  opacity: 1;
+  transform: translate(0);
+ }
+}

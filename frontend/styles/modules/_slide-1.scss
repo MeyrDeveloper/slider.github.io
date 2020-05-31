@@ -1,0 +1,426 @@
+
+
+.slide-1 {
+    height: 100vh;
+    background: url('../images/slide-1/sky.png') repeat-x;
+    background-size: cover;
+
+    #lottie {
+        position: absolute;
+        z-index: 999;
+        .state-2 & {
+            opacity: 0;
+        }
+    }
+
+    &--top {
+        width: 100%;
+        height: 100%;
+        max-height: 200px;
+        background: url('../images/slide-1/stars.png') repeat-x;
+        animation: sky 2000ms ease;
+    }
+    &--content {
+        height: calc(100vh - 200px);
+        animation: content 300ms ease-in-out;
+        &--cloud {
+            z-index: 1;
+            position: absolute;
+            top: 17%;
+            width: 100vw;
+        }
+        &--sphere {
+            position: absolute;
+            left: 0;
+            bottom: 22vh;
+            width: 100%;
+            z-index: 2;
+            animation: content 1000ms ease;
+        }
+
+        &--down {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+            background: url('../images/slide-1/GROUND.png') repeat-x;
+            background-size: 100% 20%;
+            background-position: bottom center;
+            position: relative;
+            z-index: 3;
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: 70vh;
+            }
+            &--bot {
+
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
+    }
+    &--sphere {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        height: 54%;
+        margin-top: 80px;
+        max-width: calc(604px);
+        max-height: calc(604px);
+        position: relative;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &--bg {
+            position: absolute;
+            bottom: -35%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 45vw;
+            height: 62vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &--lights {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+    }
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .img-1 {
+        position: relative;
+        z-index: 2;
+    }
+    &--lamps {
+        z-index: 3;
+        left: 49.2%;
+        bottom: 12.8%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: 48.9%;
+        max-height: 272px;
+    }
+
+    &--text {
+        max-width: 1288px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        z-index: 4;
+        
+        opacity: 0;
+        .state-2 & {
+            animation: text 1900ms ease;
+            opacity: 1;
+        }
+        &--top {
+            display: flex;
+            justify-content: flex-end;
+            h2 {
+                text-transform: uppercase;
+                line-height: 1;
+            }
+            h2:first-of-type {
+                font-family: $font-secondary;
+                font-size: 125px;
+                font-weight: bold;
+            }
+            h2:last-of-type {
+                font-family: $font-secondary;
+                font-size: 85px;
+            }
+            
+        }
+        h1 {
+            font-family: $font-third;
+            font-size: 226px;
+        }
+    }
+    .clouds {
+        position: absolute;
+        z-index: 1;
+    }
+    &-cloud {
+        &--mult {
+            max-width: 70vw;
+            animation: clouds 200s linear infinite;
+        }
+        &--1 {
+            left: 35vw;
+            top: 2vh;
+            animation: cloud1 180s linear infinite;
+        }
+        &--2 {
+            top: 32vh;
+            left: 25vw;
+            
+        }
+        &--3 {
+            top: -4vh;
+            right: 2vw;
+            animation: cloud2 180s linear infinite;
+        }
+        &--4 {
+            max-width: 140px;
+            top: 20vh;
+            right: 3vw;
+            animation: cloud2 190s linear infinite;
+            img {
+                width: 100%;
+                height: auto;    
+            }
+        }
+        &--5 {
+            max-width: 180px;
+            top: 20vh;
+            left: -4vw;
+            
+            img {
+                width: 100%;
+                height: auto;    
+            }
+        }
+        &--6 {
+            top: 5vh;
+            right: 5vw;
+            animation: cloud3 160s linear infinite;
+        }
+        &--7 {
+            top: 6vh;
+            right: 15vw;
+            animation: cloud4 160s linear infinite 1s;
+        }
+    }
+    &--light {
+        position: absolute;
+        &--1 {
+            left: 13vw;
+            top: 0;
+            animation: light1 100ms ease infinite;
+        }
+        &--2 {
+            right: 26vw;
+            top: -12vh;
+            z-index: 3;
+            animation: light2 200ms ease infinite;
+        }
+        &--3 {
+            right: 21vw;
+            top: 15vh;
+            z-index: 1;
+            animation: light1 100ms ease infinite 80ms;
+        }
+        &--4 {
+            left: 3vw;
+            top: -11vh;
+            z-index: 3;
+            animation: light3 150ms ease-in infinite 50ms;
+        }
+    }
+
+    @keyframes sky {
+        0% {
+            transform: translateY(-500px);
+        }
+        80% {
+            transform: translateY(-500px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes clouds {
+        0% {
+          left: -78%;
+
+        }
+        100% {
+          left: calc(100vw + 3vw);
+        }
+    }
+
+    @keyframes cloud1 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(69vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes cloud1 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(69vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes cloud2 {
+        0% {
+            right: -3vw;
+        }
+        100% {
+            right: calc(100vw + 3vw);
+        }
+    }
+
+    @keyframes cloud3 {
+        0% {
+            right: 5vw;
+        }
+        10% {
+            right: -5vw;
+        }
+        20% {
+            right: calc(100vw + 5vw);
+        }
+        100% {
+            right: 5vw;
+        }
+    }
+    @keyframes cloud4 {
+        0% {
+            right: 15vw;
+        }
+        20% {
+            right: -5vw;
+        }
+        30% {
+            right: calc(100vw + 5vw);
+        }
+        100% {
+            right: 15vw;
+        }
+    }
+
+    @keyframes light1 {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes light2 {
+        0% {
+            right: 26vw;
+            transform: rotate(0);
+            opacity: 1;
+        }
+        25% {
+            right: 26vw;
+            transform: rotate(0);
+            opacity: 0;
+        }
+        49% {
+            right: 37vw;
+            transform: rotate(-27deg);
+            opacity: 0;
+        }
+        50% {
+            right: 37vw;
+            transform: rotate(-27deg);
+            opacity: 1;
+        }
+        99% {
+            right: 37vw;
+            transform: rotate(-27deg);
+            opacity: 0;
+        }
+        100% {
+            right: 26vw;
+            transform: rotate(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes light3 {
+        0% {
+            left: 3vw;
+            top: -11vh;
+            transform: scaleX(1) rotate(0);
+            opacity: 1;
+        }
+        25% {
+            left: 3vw;
+            top: -11vh;
+            transform: scaleX(1) rotate(0);
+            opacity: 0;
+        }
+        49% {
+            left: 19vw;
+            top: 2vh;
+            transform: scaleX(-1) rotate(12deg);
+            opacity: 0;
+        }
+        50% {
+            left: 19vw;
+            top: 2vh;
+            transform: scaleX(-1) rotate(12deg);
+            opacity: 1;
+        }
+        99% {
+            left: 19vw;
+            top: 2vh;
+            transform: scaleX(-1) rotate(12deg);
+            opacity: 0;
+        }
+        100% {
+            left: 3vw;
+            top: -11vh;
+            transform: scaleX(1) rotate(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes content {
+        0% {
+            transform: translateY(100vh);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes text {
+        0% {
+            transform: translate(-50%, -100vh);
+        }
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+}

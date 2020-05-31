@@ -1,0 +1,90 @@
+.section .slide-08{
+    background: url('../images/slide-8/bg.jpg');
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    .iner-bg{
+        background: url('../images/slide-8/iner-bg.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity 0.5s;
+    }
+ 
+    .iner-bg-2{
+        position: absolute;
+        top: 0%;
+        right: 0%;    
+        @include resize((
+            width: 1154px,
+            height: 973px
+        ));
+        background: url('../images/slide-8/iner-bg-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 0.5s;
+    }
+    @keyframes scal {
+        from {transform: scale(1.0);}
+        50% {transform: scale(1.05);}
+        to {transform: scale(1.0);}
+        }
+    .iner-bg-3{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        @include resize((
+            width: 1154px,
+            height: 973px
+        ));
+        background: url('../images/slide-8/iner-bg-3.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        animation: scal  5s infinite ease-in-out;
+        transition: 1s opacity 2.5s;
+    }
+
+    .title{
+        position: absolute;
+        top: 10vh;
+        color: #ffffff;
+        font-size: 98px;
+        font-family: 'Westing';
+        left: -100%;
+        transition: 1s left 3s;
+    }
+    .text{
+        position: absolute;
+        top: 30vh;
+        color: #ffffff;
+        font-size: 55px;
+        font-family: 'Westing';
+        left: 5%;
+        font-family: "MyriadPro-Cond";
+        overflow: hidden;
+        height: 0%;
+        transition: 2s height 4s;
+    }
+}
+
+
+.section.active .slide-08{
+    .iner-bg, .iner-bg-2, .iner-bg-3{
+        opacity: 1;
+    }
+    .title{
+        left: 5%;
+    }
+    .text{
+        height: 100%;
+    }
+}

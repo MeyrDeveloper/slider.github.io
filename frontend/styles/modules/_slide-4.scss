@@ -1,0 +1,192 @@
+.slide-4 {
+    background-image: url('../images/slide-4/background.png');
+    height: 100vh;
+    // width: 100vw;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+.slide-4_cuts {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_red-light {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    //    z-index: -1;
+    bottom: 0;
+    right: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+@keyframes playMen {
+    from {transform: translateY(10px);}
+    50% {transform: translateY(0px);}
+    to {transform: translateY(10px);}
+    }
+.slide-4_scientiest-1 {
+    position: absolute;
+    width: 15%;
+    left: 50%;
+    bottom: 6%;
+    z-index: -1;
+    animation: playMen  3s infinite ease-in-out;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.slide-4_scientiest-2 {
+    position: absolute;
+    width: 13%;
+    left: 77%;
+    bottom: 13%;
+    z-index: -1;
+    animation: playMen  5s infinite ease-in-out;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+@keyframes brains {
+    from {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    to {transform: scale(1);}
+    }
+.slide-4_brains {
+    position: absolute;
+    width: 28%;
+    left: 56%;
+    bottom: 0%;
+    z-index: -1;
+    animation: brains  5s infinite ease-in-out;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+@keyframes brains2 {
+    from {transform: scale(1); opacity: 1;}
+    50% {transform: scale(1.1); opacity: 0.8;}
+    to {transform: scale(1); opacity: 1;}
+    }
+.slide-4_dna{
+    position: absolute;
+    width: 19%;
+    left: 61%;
+    bottom: 31%;
+    z-index: -2;
+    animation: brains2  10s infinite ease-in-out;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_lines{
+    position: absolute;
+    width: 47%;
+    left: 48%;
+    bottom: 10%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_dna-2{
+    position: absolute;
+    bottom: 32%;
+    width: 103%;
+    left: 13%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_lines-wrapper{
+position: relative;
+}
+
+.slide-4_lines-dot-1{
+    position: absolute;
+    top: -8%;
+    left: 8%;
+    width: 13%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.slide-4_lines-dot-2{
+    position: absolute;
+    top: 14%;
+    left: 90%;
+    width: 8%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_lines-dot-3{
+    position: absolute;
+    top: 21%;
+    left: 4%;
+    width: 11%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slide-4_text{
+    position: absolute;
+    left: 3%;
+    text-transform: uppercase;
+    z-index: 100;
+    top: 16%;
+    h2{
+        color: #ffffff;
+        font-size: 110px;
+        font-family: "Westing";
+    }
+    ul{
+        margin-left: -15px;
+        margin-top: 30px;
+        li{
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            font-size: 47px;
+        }
+    }
+}

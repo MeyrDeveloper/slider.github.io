@@ -1,0 +1,287 @@
+.slide-2 {
+  overflow: hidden;
+  font-family: $font-secondary;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/slide-2/slide-2-bg.png") no-repeat center / cover;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+  }
+
+  .left {
+    width: calc(100% / 12 * 8);
+    z-index: 1;
+    height: inherit;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    &__title {
+      color: #ffffff;
+      font-family: $font-third;
+      font-size: 116px;
+      margin-left: 10%;
+    }
+
+    &__text {
+      color: #ffffff;
+      max-width: 744px;
+      font-size: 63px;
+      margin-top: 60px;
+      margin-left: 10%;
+    }
+
+    &__texts {
+      min-height: 50%
+    }
+  }
+
+  .right {
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+
+    // &-frame {
+    //   height: 100%;
+    //   background: url("../images/slide-2/frame.png") no-repeat center/cover ;
+    // }
+
+    &-bg {
+      height: 100%;
+      background: url("../images/slide-2/right-bg.jpg") no-repeat center/cover ;
+    }
+
+    &-images {
+      width: 59%;
+      height: 100%;
+      position: absolute;
+      right: -33px;
+      top: 0;
+
+      .right-image {
+        width: 100%;
+        height: 0;
+        padding-bottom: 106%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        margin: auto;
+
+        &.idle {
+          img {
+            opacity: 1;
+          }
+        }
+
+        img {
+          height: 100%;
+          position: absolute;
+          top: 10px;
+          opacity: 0;
+          left: 0;
+        }
+
+      }
+      .right-image-1 {
+        &.in {
+          .right-image-1-tubes {
+            animation: fade_in .2s 0s ease-in both;
+          }
+          .right-image-1-robot {
+            opacity: 1;
+            animation: slide_down .4s .18s ease-in both;
+          }
+          .right-image-1-robot-hand {
+            opacity: 1;
+            animation: slide_down .6s .22s ease-in both;
+          }
+          .right-image-1-bottom {
+            opacity: 1;
+            animation: slide_up_in .2s .7s ease-in both;
+          }
+          .right-image-1-screens {
+            animation: opacity_shake .5s 1s ease-in-out both;
+          }
+        }
+        &.out {
+          .right-image-1-robot, .right-image-1-robot-hand, .right-image-1-bottom, .right-image-1-screens {
+            animation: slide_right 1s 0s ease-in-out both;
+            opacity: 0;
+            transition: opacity .3s .7s ease-out; 
+          }
+          .right-image-1-tubes {
+            animation: slide_right 1s .1s ease-in-out both;
+            opacity: 0;
+            transition: opacity .5s .1s ease-out; 
+          }
+        }
+      }
+
+      .right-image-2 {
+        &.in {
+          .right-image-2-tubes {
+            animation: fade_in .1s 0s ease-in both;
+          }
+          .right-image-2-person {
+            opacity: 1;
+            transition: opacity 0s .1s ease-in;
+            animation: slide_up_in .3s .1s ease-in;
+          }
+          .right-image-2-persons {
+            opacity: 1;
+            transition: opacity 0s .4s ease-in;
+            animation: slide_up_in .5s .4s cubic-bezier(0.38, -0.5, 0.76, 1.37);
+          }
+        }
+        &.out {
+          .right-image-2-tubes {
+            animation: slide_right 1s 0s ease-in-out both;
+            opacity: 0;
+            transition: opacity .3s .7s ease-out; 
+          }
+          .right-image-2-persons {
+            animation: slide_right 1s 0s ease-in-out both;
+            opacity: 0;
+            transition: opacity .3s .7s ease-out; 
+          }
+          .right-image-2-person {
+            animation: slide_right 1s .1s ease-in-out both;
+            opacity: 0;
+            transition: opacity .5s .1s ease-out; 
+          }
+        }
+      }
+
+      .right-image-3 {
+        &.in {
+          .right-image-3-bg {
+            animation: fade_in .1s 0s ease-in both;
+          }
+          .right-image-3-city-shadow {
+            animation: fade_in .8s .1s ease-in both;
+          }
+          .right-image-3-sun {
+            animation: fade_in .8s .1s ease-in both;
+          }
+          .right-image-3-city {
+            animation: zoom_out 1.3s .4s cubic-bezier(0.12, 1, 1, 1) both;
+            opacity: 1;
+            transition: opacity .8s .1s ease-in both;
+          }
+          .right-image-3-balcony {
+            animation: zoom_out 1s .7s cubic-bezier(0.12, 1, 1, 1) both;
+            opacity: 1;
+            transition: opacity .5s .4s ease-in both;
+          }
+        }
+        &.out {
+          .right-image-3-balcony {
+            animation: slide_up_delay .6s 0s ease-in-out both;
+            opacity: 0;
+            transition: opacity .3s .3s ease-out;
+          }
+          .right-image-3-city, .right-image-3-city-shadow {
+            animation: slide_up_delay 1s 0s ease-in-out both;
+            opacity: 0;
+            transition: opacity .2s .44s ease-out;
+          }
+          .right-image-3-sun {
+            animation: slide_up .5s .4s ease-in-out both;
+            opacity: 0;
+            transition: opacity .5s .4s ease-out;
+          }
+          .right-image-3-bg {
+            opacity: 0;
+            transition: opacity .2s 1s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide_down {
+  0% {
+    transform: translateY(-1200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slide_up_in {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes opacity_shake {
+  0%, 15%, 25%, 50%, 65%, 70%, 78%, 80%, 90%, 91% {
+    opacity: 0;
+  }
+  20%, 55%, 70%, 77%, 90.5%, 91.5%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes slide_right {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+@keyframes zoom_out {
+  0% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide_up {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide_up_delay {
+  0% {
+    transform: translateY(0px);
+  }
+  20%, 50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-1500px);
+  }
+}

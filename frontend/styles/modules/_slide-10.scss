@@ -1,0 +1,331 @@
+.section .slide-10{
+    background: url('../images/slide-10/bg.jpg');
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    .iner-bg{
+        background: url('../images/slide-10/iner-bg.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: 1s opacity 0.5s;
+    }
+    @keyframes rotatee {
+        from {transform: rotate(0deg);}
+        50% {transform: rotate(10deg);}
+        to {transform: rotate(0deg);}
+        }
+
+        @keyframes rotatee23 {
+            from {transform: rotate(10deg);}
+            50% {transform: rotate(0deg);}
+            to {transform: rotate(10deg);}
+            }
+
+        @keyframes rotate2 {
+            from {transform: rotate(0deg) translate(-0%, -100%);}
+            50% {transform: rotate(10deg) translate(-0%, -100%);}
+            to {transform: rotate(0deg) translate(-0%, -100%);}
+            }
+
+            @keyframes scall {
+                from {transform: scale(1.0);}
+                50% {transform: scale(1.1);}
+                to {transform: scale(1.0);}
+                }
+    .iner-bg-2{
+        position: absolute;
+        top: 10%;
+        left: 44.5%;    
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 2s;
+        animation: rotatee  5s infinite ease-in-out;
+    }
+    .iner-bg-2-2{
+        position: absolute;
+        top: 10%;
+        left: 44.5%;    
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-2-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 2s;
+        animation: rotatee23  3s infinite ease-in-out;
+    }
+    .iner-bg-4{
+        position: absolute;
+        top: 56%;
+        left: 72.5%; 
+        @include resize((
+            width: 176px,
+            height: 219px
+        ));
+        background: url('../images/slide-10/iner-bg-4.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+        animation: rotate2  3s infinite ease-in-out;
+    }
+
+    .iner-bg-3{
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-3.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+    }
+
+    .iner-bg-5{
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-5.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+    }
+    @keyframes rotate245 {
+        from {opacity: 1;}
+        50% {opacity: 0;}
+        to {opacity: 1;}
+        }
+    .iner-bg-5-2{
+        animation: rotate245  3s infinite ease-in-out;
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-5-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        visibility: hidden;
+        transition: 1s visibility 1s;
+    }
+    .iner-bg-6{
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-6.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+        animation: scall  3s infinite ease-in-out;
+    }
+    .iner-bg-7{
+        
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-7.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+    }
+    .iner-bg-7-2{
+        animation: rotate245  3s infinite ease-in-out;
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-7-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        visibility: hidden;
+        transition: 1s visibility 1s;
+    }
+    .iner-bg-8{
+        position: absolute;
+        top: 10%;
+        left: 44.5%; 
+        @include resize((
+            width: 877px,
+            height: 877px
+        ));
+        background: url('../images/slide-10/iner-bg-8.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1s;
+        animation: scall  3s infinite ease-in-out;
+    }
+    .title, .title-2, .title-3{
+        position: absolute;
+        top: 10vh;
+        color: #ffffff;
+        font-size: 98px;
+        font-family: 'Westing';
+        left: -100%;
+        opacity: 0;
+        transition: 1s all 2s;
+    }
+    .text, .text-2, .text-3{
+        position: absolute;
+        top: 40vh;
+        color: #ffffff;
+        font-size: 55px;
+        font-family: 'Westing';
+        left: 5%;
+        font-family: "MyriadPro-Cond";
+        overflow: hidden;
+        height: 0%;
+        opacity: 0;
+        transition: 2s all 2s;
+    }
+    .sup-title-3{
+        position: absolute;
+        top: 22vh;
+        color: #ffffff;
+        font-size: 72px;
+        font-family: 'Westing';
+        left: 5%;
+        font-family: "MyriadPro-BoldCond";
+        overflow: hidden;
+        height: 0%;
+        opacity: 0;
+        transition: 2s all 2s;
+    }
+}
+
+
+.section.active .slide-10{
+    .iner-bg, .iner-bg-2, .iner-bg-2-2, .iner-bg-3, .iner-bg-4{
+        opacity: 1;
+    }
+    .title{
+        left: 5%;
+        opacity: 1;
+    }
+    .text{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.section.active.state-1 .slide-10{
+    .iner-bg-2, .iner-bg-2-2, .iner-bg-3, .iner-bg-4{
+        opacity: 0;
+    }
+    .iner-bg-5-2{
+        visibility: visible;
+    }
+    .iner-bg-5, .iner-bg-6{
+        opacity: 1;
+    }
+    .title{
+        left: 5%;
+        opacity: 0;
+    }
+    .text{
+        height: 100%;
+        opacity: 0;
+    }
+
+    .title-2{
+        left: 5%;
+        opacity: 1;
+    }
+    .text-2{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+
+.section.active.state-2 .slide-10{
+    .iner-bg-2, .iner-bg-2-2, .iner-bg-3, .iner-bg-4{
+        opacity: 0;
+    }
+    .iner-bg-5, .iner-bg-6{
+        opacity: 0;
+    }
+    .iner-bg-7-2{
+        visibility: visible;
+    }
+    .iner-bg-7, .iner-bg-8{
+        opacity: 1;
+    }
+    .title{
+        left: 5%;
+        opacity: 0;
+    }
+    .text{
+        height: 100%;
+        opacity: 0;
+    }
+
+    .title-2{
+        left: 5%;
+        opacity: 0;
+    }
+    .text-2{
+        height: 100%;
+        opacity: 0;
+    }
+    .title-3{
+        left: 5%;
+        opacity: 1;
+    }
+    .text-3{
+        height: 100%;
+        opacity: 1;
+    }
+    .sup-title-3{
+        height: 100%;
+        opacity: 1;
+    }
+}

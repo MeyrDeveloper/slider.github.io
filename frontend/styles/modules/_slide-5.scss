@@ -1,0 +1,403 @@
+* {
+  box-sizing: border-box;
+}
+.slide-5 {
+  overflow: hidden;
+  font-family: $font-secondary;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/slide-5/bg.png") no-repeat center / cover;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+  }
+  .left {
+    width: calc(100% / 12 * 5);
+    z-index: 1;
+    height: inherit;
+    background: url(../images/slide-5/bg_side.png) no-repeat center / cover;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    &__title {
+      color: #ffffff;
+      font-family: $font-third;
+      font-size: 116px;
+      margin-left: 10%;
+      opacity: 1;
+      transform: translate(-150%);
+      transition: 1s all ease;
+    }
+    &__text {
+      color: #ffffff;
+      max-width: 533px;
+      font-size: 63px;
+      margin-top: 60px;
+      margin-left: 12%;
+      margin-bottom: 160px;
+      opacity: 0;
+      transform: translate(-150%);
+      transition: 1s all ease;
+    }
+    &__text2 {
+      position: absolute;
+      left: 12%;
+      top: 31%;
+      color: #ffffff;
+      font-size: 47px;
+      opacity: 0;
+      transform: translate(-150%);
+      transition: 1s all ease;
+      p {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .right {
+    width: calc(100% / 12 * 7);
+    // background-color: rgba($color: #000000, $alpha: 0.3);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__rectungle {
+      position: absolute;
+      bottom: -37px;
+      left: 48%;
+      height: 98vh;
+      width: 31vw;
+      transform: translate(-50%, 0%);
+      background: url(../images/slide-5/orange_rectungle.png) no-repeat center/
+        cover;
+      background-size: 100% 100%;
+      z-index: 1;
+      overflow: hidden;
+      &__bg {
+        position: absolute;
+        bottom: 0px;
+        left: 47%;
+        height: auto;
+        width: 68%;
+        z-index: 0;
+        transform: translate(-50%);
+      }
+      &__superman {
+        position: absolute;
+        bottom: -35px;
+        left: 53%;
+        transform: translate(-50%, 0%) scale(0.7);
+        width: 67%;
+        height: auto;
+        display: block;
+        transition: 0.5s all ease;
+        opacity: 0;
+      }
+      &__blur {
+        position: absolute;
+        left: 47%;
+        bottom: 0;
+        width: 59%;
+        transform: translate(-50%, 0%);
+      }
+      &__el {
+        position: absolute;
+        transition: 0.3s all ease;
+        &--1 {
+          left: -1.5%;
+          top: 7%;
+          width: 25%;
+          animation: 1s scale2 infinite linear;
+          opacity: 0;
+          @keyframes scale2 {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(0.98);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+        }
+        &--2 {
+          top: 5%;
+          width: 46%;
+          animation: 1s scale2 infinite linear;
+          right: -1.5%;
+          opacity: 0;
+        }
+        &--3 {
+          left: -1.5%;
+          opacity: 0;
+          top: 19%;
+          width: 29%;
+          animation: 1s scale2 infinite linear;
+        }
+        &--4 {
+          right: 0;
+          opacity: 0;
+          top: 19%;
+          width: 29%;
+          animation: 1s scale2 infinite linear;
+        }
+        &--5 {
+          left: 0;
+          opacity: 0;
+          top: 33%;
+          width: 32%;
+          animation: 1s scale2 infinite linear;
+        }
+        &--6 {
+          right: 0;
+          opacity: 0;
+          top: 31%;
+          width: 34%;
+          animation: 1s scale2 infinite linear;
+        }
+        &--7 {
+          left: 50%;
+          top: 27%;
+          width: 70%;
+          opacity: 1;
+          transform: translate(-50%);
+        }
+      }
+    }
+
+    .people {
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      height: 100%;
+      z-index: 5;
+      .robot {
+        height: auto;
+        width: 41%;
+        position: absolute;
+        bottom: -13px;
+        left: -138px;
+        z-index: 0;
+      }
+      .kid-1 {
+        height: auto;
+        width: 33%;
+        position: absolute;
+        bottom: -44px;
+        left: -67px;
+        z-index: 4;
+        animation: 2s scalekid infinite linear;
+        @keyframes scalekid {
+          0% {
+            transform: translate(0);
+          }
+          50% {
+            transform: translate(0, 1%);
+          }
+          100% {
+            transform: translate(0);
+          }
+        }
+      }
+      .kid-2 {
+        height: auto;
+        width: 51%;
+        position: absolute;
+        bottom: -44px;
+        left: 20%;
+        z-index: 4;
+        animation: 2s scalekid infinite linear;
+      }
+      .kid-3 {
+        height: auto;
+        width: 41%;
+        position: absolute;
+        bottom: -70px;
+        left: 60%;
+        z-index: 4;
+        animation: 2s scalekid infinite linear;
+        animation-delay: 0.5s;
+      }
+    }
+  }
+  .city-block {
+    width: 100%;
+    height: 16vh;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    &__line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+    .city-1 {
+      position: absolute;
+      z-index: 1;
+      left: 35%;
+      bottom: 59px;
+      width: 13%;
+    }
+    .city-2 {
+      position: absolute;
+      z-index: 2;
+      right: 5%;
+      bottom: 34%;
+      width: 18%;
+    }
+    .city-3 {
+      position: absolute;
+      z-index: 1;
+      right: 2%;
+      bottom: 98%;
+      width: 6%;
+      height: auto;
+    }
+  }
+  .blue-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+  }
+  .clouds {
+    position: absolute;
+    &--1 {
+      left: 35%;
+      top: 7%;
+      width: 18%;
+      animation: 50s cloud infinite linear;
+      @keyframes cloud {
+        0% {
+          left: 35%;
+        }
+
+        50% {
+          left: 80%;
+        }
+        100% {
+          left: 35%;
+        }
+      }
+    }
+    &--2 {
+      right: 4%;
+      top: 26%;
+      width: 12%;
+      animation: 50s cloud2 infinite linear;
+      @keyframes cloud2 {
+        0% {
+          right: -5%;
+        }
+        50% {
+          right: 70%;
+        }
+        100% {
+          right: -5%;
+        }
+      }
+    }
+    &--3 {
+      right: -1%;
+      top: 29%;
+      width: 12%;
+      animation: 50s cloud3 infinite linear;
+      @keyframes cloud3 {
+        0% {
+          right: -5%;
+        }
+        50% {
+          right: 70%;
+        }
+        100% {
+          right: -5%;
+        }
+      }
+    }
+    &--4 {
+      right: 0%;
+      top: 45%;
+      width: 9%;
+      animation: 50s cloud4 infinite linear;
+      @keyframes cloud4 {
+        0% {
+          right: 10%;
+        }
+        50% {
+          right: 70%;
+        }
+        100% {
+          right: 10%;
+        }
+      }
+    }
+  }
+}
+.section.active .slide-5 {
+  .left {
+    &__title {
+      opacity: 1;
+      transform: translate(0);
+    }
+    &__text {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
+.section.active.state-1 .slide-5 {
+  .right__rectungle__el {
+    &--1 {
+      left: 10%;
+      opacity: 1;
+    }
+    &--2 {
+      right: 9%;
+      opacity: 1;
+    }
+    &--3 {
+      left: 7%;
+      opacity: 1;
+    }
+    &--4 {
+      right: 9%;
+      opacity: 1;
+    }
+    &--5 {
+      left: 7%;
+      opacity: 1;
+    }
+    &--6 {
+      right: 9%;
+      opacity: 1;
+    }
+    &--7 {
+      left: 40%;
+      opacity: 0;
+      transform: translate(-50%);
+    }
+  }
+  .left {
+    &__text {
+      opacity: 0;
+      transform: translate(-150%);
+    }
+    &__text2 {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  .right__rectungle__superman {
+    transform: translate(-50%, 0%) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,38 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+<main class="main">
+    <div class="container">
+        <div class="flexslider" id="slider">
+				<ul class="slides">
+					<li >
+                        <a data-lightbox="another" href="images/1.jpeg">
+                            <img src="images/1.jpeg" />
+                        </a>
+                    </li>
+					<li>
+						<a data-lightbox="another" href="images/2.jpeg">
+                            <img src="images/2.jpeg" />
+                        </a>
+                    </li>
+					<li>
+						<a data-lightbox="another" href="images/1.jpeg">
+                            <img src="images/1.jpeg" />
+                        </a>
+                    </li>
+                </ul>
+			</div>
+			<div class="flexslider" id="carousel">
+				<ul class="slides">
+					<li>
+						<a data-lightbox="example" href="images/1.jpeg"><img src="images/1.jpeg" /></a></li>
+					<li>
+						<a data-lightbox="example" href="images/2.jpeg"><img src="images/2.jpeg" /></a></li>
+					<li>
+						<a data-lightbox="example" href="images/1.jpeg"><img src="images/1.jpeg" /></a></li>
+				</ul>
+			</div>
+    </main>
+
+{% endblock %}

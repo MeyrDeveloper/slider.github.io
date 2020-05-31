@@ -1,0 +1,95 @@
+.section .slide-09{
+    background: url('../images/slide-9/bg.jpg');
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    .iner-bg{
+        background: url('../images/slide-9/iner-bg.png');
+        background-position: top;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        @include resize((
+            width: 1920px,
+            height: 1080px
+        ));
+        opacity: 0;
+        transition: 1s opacity 0.5s;
+    }
+    @keyframes rotatee {
+        from {transform: rotate(0deg);}
+        50% {transform: rotate(10deg);}
+        to {transform: rotate(0deg);}
+        }
+    .iner-bg-2{
+        position: absolute;
+        top: 20%;
+        left: 50.5%;    
+        @include resize((
+            width: 641px,
+            height: 641px
+        ));
+        background: url('../images/slide-9/iner-bg-2.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 1.5s;
+        animation: rotatee  5s infinite ease-in-out;
+    }
+
+    .iner-bg-3{
+        position: absolute;
+        top: 30.5%;
+        left: 56.5%;
+        @include resize((
+            width: 417px,
+            height: 417px
+        ));
+        background: url('../images/slide-9/iner-bg-3.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: 1s opacity 2.5s;
+    }
+
+    .title{
+        position: absolute;
+        top: 10vh;
+        color: #ffffff;
+        font-size: 98px;
+        font-family: 'Westing';
+        left: -100%;
+        transition: 1s left 3s;
+    }
+    .text{
+        position: absolute;
+        top: 30vh;
+        color: #ffffff;
+        font-size: 55px;
+        font-family: 'Westing';
+        left: 5%;
+        font-family: "MyriadPro-Cond";
+        overflow: hidden;
+        height: 0%;
+        transition: 2s height 4s;
+    }
+}
+
+
+.section.active .slide-09{
+    .iner-bg, .iner-bg-2, .iner-bg-3{
+        opacity: 1;
+    }
+    .title{
+        left: 5%;
+    }
+    .text{
+        height: 100%;
+    }
+}
